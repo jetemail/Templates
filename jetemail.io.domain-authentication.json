@@ -1,0 +1,36 @@
+{
+  "providerId":"jetemail.io",
+  "providerName":"JetEmail",
+  "serviceId":"domain-auth",
+  "serviceName":"JetEmail Domain Authentication",
+  "version": 1,
+  "logoUrl":"https://cdn.jetemail.io/assets/images/logo.svg",
+  "syncPubKeyDomain": "domainconnect.jetemail.io",
+  "syncRedirectDomain": "jetemail.io",
+  "records":[
+    {
+      "type": "CNAME",
+      "host": "%SUBDOMAIN%.%domain%.",
+      "pointsTo": "%POINTS_TO%",
+      "ttl": 1800
+    },
+    {
+      "type": "CNAME",
+      "host": "%SUBDOMAIN_DKIM1%.%domain%.",
+      "pointsTo": "%POINTS_TO_DKIM1%",
+      "ttl": 1800
+    },
+    {
+      "type": "CNAME",
+      "host": "%SUBDOMAIN_DKIM2%.%domain%.",
+      "pointsTo": "%POINTS_TO_DKIM2%",
+      "ttl": 1800
+    },
+    {
+            "type": "TXT",
+            "host": "@",
+            "ttl": 3600,
+            "data": "%txt%"
+   }
+  ]
+}
